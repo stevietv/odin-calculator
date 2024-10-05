@@ -55,16 +55,17 @@ body {
     background-color: #c1c1c7;
 }
 
+
 .button.operator {
     background-color: #8b8b97;
 }
 
-.wideButton {
-    flex: 0 1 50%;
+.button.activeOperator {
+    background-color: #60606b;
 }
 
-.activeOperator {
-    background-color: #8be2c2;
+.wideButton {
+    flex: 0 1 50%;
 }
 
 button:hover {

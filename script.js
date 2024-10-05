@@ -32,6 +32,31 @@ function addListeners() {
     // Add Listener for equals button
     document.querySelector('.equals').addEventListener('click', calculate);
 
+    document.addEventListener('keydown', (event) => {
+        console.log(event.key)
+        if (event.key >=0 && event.key <= 9) {
+            document.getElementById(`button${event.key}`).click();
+        }
+        if (event.key === '+') {
+            document.getElementById('buttonPlus').click();
+        }
+        if (event.key === '-') {
+            document.getElementById('buttonMinus').click();
+        }
+        if (event.key === '*') {
+            document.getElementById('buttonMultiply').click();
+        }
+        if (event.key === '/') {
+            document.getElementById('buttonDivide').click();
+        }
+        if (event.key === 'Enter') {
+            document.getElementById('buttonEquals').click();
+        }
+        if (event.key === 'Backspace') {
+            processBackspace();
+        }
+    })
+
 
 }
 
@@ -160,6 +185,14 @@ function multiply(firstOperand, secondOperand) {
 
 function divide(firstOperand, secondOperand) {
     return (firstOperand / secondOperand).toFixed(9) * 1;
+}
+
+function processBackspace() {
+    if (displayValue.length > 1) {
+        displayValue = displayValue.slice(0,-1);
+    }
+    inputValue = parseFloat(displayValue);
+    updateDisplay(displayValue);
 }
 
 addListeners();
