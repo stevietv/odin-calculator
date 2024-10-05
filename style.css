@@ -1,19 +1,27 @@
+@import url('https://fonts.cdnfonts.com/css/calculator');
+@import url('https://fonts.cdnfonts.com/css/jetbrains-mono-2');
+
 * {
     box-sizing: border-box;
+    font-family: 'JetBrains Mono', sans-serif;
+    font-weight: 800;
+
 }
 
 body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
-.CalculatorContainer {
+.calculatorContainer {
     display: flex;
     flex-wrap: wrap;
-    flex: 0 1 25%;
+    flex: 0 1 20%;
     min-width: 300px;
+    border: 1px solid grey;
+    background-color: rgb(85, 85, 85);
 }
 
 .buttons, .result {
@@ -23,14 +31,16 @@ body {
 }
 
 .result {
-    height: 50px;
-    border: 1px solid black;
+    height: 100px;
+    border: 1px solid grey;
     justify-content: flex-end;
     align-items: center;
-    font-size: 1.5em;
-    background: black;
+    font-size: 4em;
+    background: rgb(85, 85, 85);
     color: white;
     padding: 0 10px;
+    font-family: 'Calculator', sans-serif;
+    font-weight: 400;
 }
 
 .button {
@@ -38,8 +48,10 @@ body {
     flex: 0 1 25%;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    border: 1px solid black;
+    height: 75px;
+    border: 2px solid grey;
+    border-radius: 6px;
+    font-size: 1.5em;
 }
 
 .wideButton {
